@@ -31,11 +31,4 @@ class LoginRepository {
         }
 
     }
-//    fun forgotPassword(data: LoginData){
-//        //todo implemntar
-//    }
-//    fun register(data: LoginData){
-//        //todo implemntar
-//    }
-
 }

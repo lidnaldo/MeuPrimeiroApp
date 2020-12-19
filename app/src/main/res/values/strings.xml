@@ -11,10 +11,11 @@
     <!--    Validacao campos  -->
     <string name="email_required">E-mail obrigatório!</string>
     <string name="password_required">Senha obrigatória!</string>
+    <string name="password_confirm">Confirmacao de senha e senha diferentes!</string>
     <string name="password_6_char">Senha maior que 6 cacacteres!</string>
+    <string name="register_error">Email invalido ou usuário já cadastrado!</string>
     <string name="login_error">Erro no login, Verifique os dados!</string>
 
-    <!--    textos da tela de esqueci senha -->
 
 
     <!--    textos da tela de cadastro (ReristerActivity)-->
@@ -24,5 +25,7 @@
     <string name="email_register">E-mail obrigatório!</string>
     <string name="password_register">Senha obrigatória!</string>
     <string name="password_register_confirm">Confirmação de senha obrigatória!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

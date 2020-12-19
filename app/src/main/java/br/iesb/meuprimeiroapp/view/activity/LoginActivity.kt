@@ -7,12 +7,16 @@ import android.widget.Toast
 import br.iesb.meuprimeiroapp.R
 import br.iesb.meuprimeiroapp.domain.LoginData
 import br.iesb.meuprimeiroapp.domain.LoginResult
+import br.iesb.meuprimeiroapp.domain.RegisterData
+import br.iesb.meuprimeiroapp.domain.RegisterResult
 import br.iesb.meuprimeiroapp.viewmodel.LoginViewModel
-import com.google.firebase.auth.FirebaseAuth
+import br.iesb.meuprimeiroapp.viewmodel.RegisterViewModel
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_register.*
 
 class LoginActivity : AppCompatActivity() {
     lateinit var viewmodel: LoginViewModel
+    lateinit var viewmodelRegister: RegisterViewModel
 
     /* 1º do ciclo de vida do APP */
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +32,6 @@ class LoginActivity : AppCompatActivity() {
         viewmodel.resultadoParaTela.observe(this) { resultado ->
             processarResultLogin(resultado)
         }
-
     }
 
     /*
@@ -72,6 +75,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun login() {
+
         val email = etEmail.text.toString()
         val pass = etPassword.text.toString()
 
@@ -85,8 +89,15 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun register() {
+//        val email = etEmailRegister.text.toString()
+//        val pass = etPasswordRegister.text.toString()
+//        val confirmPass = etPasswordConfirmRegister.text.toString()
+
         //sucesso ir para tela de RegisterActivity
         val intentRegister = Intent(this, RegisterActivity::class.java)
         startActivity(intentRegister)
+
+//        val data = RegisterData(email, pass, confirmPass)
+//        viewmodelRegister.cadastrar(data)
     }
 }
