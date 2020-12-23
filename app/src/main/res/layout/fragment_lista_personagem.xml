@@ -15,6 +15,20 @@
         android:layout_height="match_parent"
         tools:context="view.fragment.ListaPersonagemFragment">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPersonagens"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/btChamarAPI"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/item_do_personagem" />
+
         <Button
             android:id="@+id/btChamarAPI"
             android:layout_width="0dp"
@@ -22,8 +36,8 @@
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="32dp"
-            android:text="Chamar API"
             android:onClick="@{ () -> varFragment.chamarAPI() }"
+            android:text="@string/btChamarAPI"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

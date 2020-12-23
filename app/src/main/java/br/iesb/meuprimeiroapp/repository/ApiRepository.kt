@@ -63,7 +63,7 @@ class ApiRepository {
                 nome = dto.name,
                 genero = dto.gender,
                 tipo = dto.type,
-                foto = dto.url
+                foto = dto.image
             )
         }
     }

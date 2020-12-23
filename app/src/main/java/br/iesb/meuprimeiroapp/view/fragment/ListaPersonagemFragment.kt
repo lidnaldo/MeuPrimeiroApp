@@ -5,10 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import br.iesb.meuprimeiroapp.databinding.FragmentListaPersonagemBinding
 import br.iesb.meuprimeiroapp.domain.PersonagemData
+import br.iesb.meuprimeiroapp.view.adapter.AdaptadorPersonagens
 import br.iesb.meuprimeiroapp.viewmodel.ApiViewModel
 
 class ListaPersonagemFragment : Fragment() {
@@ -38,18 +41,20 @@ class ListaPersonagemFragment : Fragment() {
         viewModel.resultadoParaTela.observe(viewLifecycleOwner){ lista ->
             mostratResultadoAPI(lista)
         }
+
+        // configuração do recycleView
+        binding.rvPersonagens.layoutManager = LinearLayoutManager(context)
+
         return binding.root
     }
 
 
     private fun mostratResultadoAPI(lista: List<PersonagemData>){
-//        var primeiroObjetoLista = lista.first()
-        var primeiroObjetoLista = lista[3]
-        var str = "nome: ${primeiroObjetoLista.nome} " +
-                "genero: ${primeiroObjetoLista.genero} " +
-                "tipo: ${primeiroObjetoLista.tipo}"
+        //RECYCLEVIEW <--> ADAPTADOR <--> FONTE DE DADOS
+        val adaptador = AdaptadorPersonagens(lista)
 
-        Toast.makeText(context, str, Toast.LENGTH_LONG).show()
+        binding.rvPersonagens.adapter = adaptador
+
     }
 
 

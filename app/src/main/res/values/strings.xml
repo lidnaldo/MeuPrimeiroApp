@@ -1,6 +1,6 @@
 <resources>
     <!--    textos da tela de login-->
-    <string name="app_name">MeuPrimeiroApp</string>
+    <string name="app_name">Ação e Consquista</string>
     <string name="btLogin">Entrar</string>
     <string name="tvForgotPassword">Esqueceu a Senha? Clique aqui!</string>
     <string name="tvRegister">Cadastre-se AQUI!</string>
@@ -16,8 +16,6 @@
     <string name="register_error">Email invalido ou usuário já cadastrado!</string>
     <string name="login_error">Erro no login, Verifique os dados!</string>
 
-
-
     <!--    textos da tela de cadastro (ReristerActivity)-->
     <string name="btRegister">Cadastrar</string>
     <string name="btBackRegister">Voltar</string>
@@ -27,5 +25,8 @@
     <string name="password_register_confirm">Confirmação de senha obrigatória!</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--    textos da tela home para API -->
+    <string name="btChamarAPI">Chamar API</string>
 
 </resources>
